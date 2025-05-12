@@ -25,21 +25,21 @@ class ComputadoraApiApplicationTests {
 
 	@Test
 	void leerComputadoraPorClave() {
-		Long claveTmp = 2L; // pavillion
+		long claveTmp = 2L; // pavillion
 		Computadora tmp =  computadoraRepository.findComputadoraByClave(claveTmp);
 		System.out.println(tmp);
 	}
 
 	@Test
 	public void eliminarComputadora() {
-		Long claveTmp = 2l;
+		long claveTmp = 2l;
 		computadoraRepository.deleteById(claveTmp);
 		System.out.println(computadoraRepository.findComputadoraByClave(claveTmp));
 	}
 
 	@Test
 	public void actualizarComputadora() {
-		Long claveTmp = 4l;
+		long claveTmp = 1l;
 		Computadora tmp =  computadoraRepository.findComputadoraByClave(claveTmp);
 		tmp.setModelo("patito 3000");
 		computadoraRepository.save(computadoraRepository.findComputadoraByClave(claveTmp));
